@@ -8,4 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class registros_fecha extends Model
 {
     use HasFactory;
+
+    protected $fillable=["fechahora_entrada","fechahora_salida"];
 }

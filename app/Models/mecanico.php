@@ -8,4 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class mecanico extends Model
 {
     use HasFactory;
+    protected $fillable=["nombres","apellidos","telefono"];
 }

@@ -13,8 +13,8 @@ return new class extends Migration
     {
         Schema::create('detalle_repuestos', function (Blueprint $table) {
             $table->id();
-            $table->string("modelo-auto_repuesto");
-            $table->string("marca-proveedor");
+            $table->string("modeloauto_repuesto");
+            $table->string("marcaproveedor");
 
             $table->timestamps();
         });

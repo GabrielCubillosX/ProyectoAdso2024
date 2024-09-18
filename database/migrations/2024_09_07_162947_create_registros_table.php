@@ -21,9 +21,9 @@ return new class extends Migration
             
             $table->foreign("mecanico_id")->references("id")->on("mecanicos");
 //-------------------------------------------------------------------------------------------
-            $table->unsignedBigInteger("registro-salidas_id");
+            $table->unsignedBigInteger("registrosalidas_id");
             
-            $table->foreign("registro-salidas_id")->references("id")->on("registros_fechas");
+            $table->foreign("registrosalidas_id")->references("id")->on("registros_fechas");
 
             $table->unsignedBigInteger("total");
 
