@@ -18,7 +18,7 @@ class ServicioController extends Controller
         ]);
     }
     public function getDataById(request $request){
-        $servicio = servicio::where('id',$request->id)->get;
+        $servicio = servicio::where('id',$request->id)->get();
         return response()->json([
             'status'=> '200',
             'message'=> 'data ...',

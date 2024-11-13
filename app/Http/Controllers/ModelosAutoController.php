@@ -20,7 +20,7 @@ class ModelosAutoController extends Controller
         ]);
     }
     public function getDataById(request $request){
-        $modelosAutos = modelos_auto::where('id',$request->id)->get;
+        $modelosAutos = modelos_auto::where('id',$request->id)->get();
         return response()->json([
             'status'=> '200',
             'message'=> 'data ...',

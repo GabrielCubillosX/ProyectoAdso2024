@@ -19,7 +19,7 @@ class PropietarioController extends Controller
         ]);
     }
     public function getDataById(request $request){
-        $propietario = propietario::where('id',$request->id)->get;
+        $propietario = propietario::where('id',$request->id)->get();
         return response()->json([
             'status'=> '200',
             'message'=> 'data ...',

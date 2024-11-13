@@ -18,7 +18,7 @@ class MecanicoController extends Controller
         ]);
     }
     public function getDataById(request $request){
-        $mecanico = mecanico::where('id',$request->id)->get;
+        $mecanico = mecanico::where('id',$request->id)->get();
         return response()->json([
             'status'=> '200',
             'message'=> 'data ...',

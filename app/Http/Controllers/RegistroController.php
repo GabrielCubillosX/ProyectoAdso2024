@@ -19,7 +19,7 @@ class RegistroController extends Controller
         ]);
     }
     public function getDataById(request $request){
-        $registro = registro::where('id',$request->id)->get;
+        $registro = registro::where('id',$request->id)->get();
         return response()->json([
             'status'=> '200',
             'message'=> 'data ...',

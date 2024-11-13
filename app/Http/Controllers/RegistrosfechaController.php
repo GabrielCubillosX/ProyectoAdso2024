@@ -18,7 +18,7 @@ class RegistrosFechaController extends Controller
         ]);
     }
     public function getDataById(request $request){
-        $registros = registros_fecha::where('id',$request->id)->get;
+        $registros = registros_fecha::where('id',$request->id)->get();
         return response()->json([
             'status'=> '200',
             'message'=> 'data ...',

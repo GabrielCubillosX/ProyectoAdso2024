@@ -17,8 +17,8 @@ class DContactoController extends Controller
             'result'=> $contactos
         ]);
     }
-    public function getDataById(request $request){
-        $contactos = d_contacto::where('id',$request->id)->get;
+    public function getDataById(Request $request){
+        $contactos = d_contacto::where('id', $request->id)->get();
         return response()->json([
             'status'=> '200',
             'message'=> 'data ...',

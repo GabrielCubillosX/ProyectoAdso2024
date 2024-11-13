@@ -18,7 +18,7 @@ class DetallerepuestoController extends Controller
         ]);
     }
     public function getDataById(request $request){
-        $detalle = detalle_repuesto::where('id',$request->id)->get;
+        $detalle = detalle_repuesto::where('id',$request->id)->get();
         return response()->json([
             'status'=> '200',
             'message'=> 'data ...',

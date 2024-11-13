@@ -19,7 +19,7 @@ class VehiculoController extends Controller
         ]);
     }
     public function getDataById(request $request){
-        $vehiculo = vehiculo::where('id',$request->id)->get;
+        $vehiculo = vehiculo::where('id',$request->id)->get();
         return response()->json([
             'status'=> '200',
             'message'=> 'data ...',
