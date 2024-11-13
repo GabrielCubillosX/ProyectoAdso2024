@@ -17,6 +17,14 @@ class ServicioController extends Controller
             'result'=> $servicio
         ]);
     }
+    public function getDataById(request $request){
+        $servicio = servicio::where('id',$request->id)->get;
+        return response()->json([
+            'status'=> '200',
+            'message'=> 'data ...',
+            'result' => $servicio
+        ]);
+    }
     public function update (Request $request){
         
         $servicio=servicio::findOrFail($request->id);

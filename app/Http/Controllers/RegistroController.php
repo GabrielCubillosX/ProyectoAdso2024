@@ -18,6 +18,14 @@ class RegistroController extends Controller
             'result'=> $registro
         ]);
     }
+    public function getDataById(request $request){
+        $registro = registro::where('id',$request->id)->get;
+        return response()->json([
+            'status'=> '200',
+            'message'=> 'data ...',
+            'result' => $registro
+        ]);
+    }
     public function update (Request $request){
         
         $registro=registro::findOrFail($request->id);

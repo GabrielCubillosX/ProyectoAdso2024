@@ -19,6 +19,14 @@ class ModelosAutoController extends Controller
             'result'=> $modelosAutos
         ]);
     }
+    public function getDataById(request $request){
+        $modelosAutos = modelos_auto::where('id',$request->id)->get;
+        return response()->json([
+            'status'=> '200',
+            'message'=> 'data ...',
+            'result' => $modelosAutos
+        ]);
+    }
     public function update (Request $request){
         $modelo=modelos_auto::findOrFail($request->id);
 

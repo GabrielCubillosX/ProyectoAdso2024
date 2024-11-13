@@ -17,6 +17,14 @@ class DetalleServicioController extends Controller
             'result'=> $detalle
         ]);
     }
+    public function getDataById(request $request){
+        $detalle = detalle_servicio::where('id',$request->id)->get;
+        return response()->json([
+            'status'=> '200',
+            'message'=> 'data ...',
+            'result' => $detalle
+        ]);
+    }
     public function update (Request $request){
         
         $detalle=detalle_servicio::findOrFail($request->id);

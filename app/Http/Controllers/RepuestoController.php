@@ -18,6 +18,14 @@ class RepuestoController extends Controller
             'result'=> $repuesto
         ]);
     }
+    public function getDataById(request $request){
+        $repuesto = repuesto::where('id',$request->id)->get;
+        return response()->json([
+            'status'=> '200',
+            'message'=> 'data ...',
+            'result' => $repuesto
+        ]);
+    }
     public function update (Request $request){
         
         $repuesto=repuesto::findOrFail($request->id);

@@ -17,6 +17,14 @@ class RegistrosFechaController extends Controller
             'result'=> $registros
         ]);
     }
+    public function getDataById(request $request){
+        $registros = registros_fecha::where('id',$request->id)->get;
+        return response()->json([
+            'status'=> '200',
+            'message'=> 'data ...',
+            'result' => $registros
+        ]);
+    }
     public function update (Request $request){
         
         $registros=registros_fecha::findOrFail($request->id);
