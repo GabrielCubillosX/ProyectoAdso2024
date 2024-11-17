@@ -94,15 +94,6 @@ Route::controller(DContactoController::class)->group(function(){
     Route::delete('/registros/delete','delete');
     
     });
-    Route::controller(RegistrosFechaController::class)->group(function(){
-    
-    Route::get('/registros_fechas/datos','getData');
-    Route::get('/registros_fechas/datosById','getDataById');
-    Route::post('/registros_fechas/save','save');
-    Route::put('/registros_fechas/update','update');
-    Route::delete('/registros_fechas/delete','delete');
-    
-    });
     Route::controller(RepuestoController::class)->group(function(){
     
     Route::get('/repuestos/datos','getData');

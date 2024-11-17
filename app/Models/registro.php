@@ -8,6 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class registro extends Model
 {
     use HasFactory;
-    protected $fillable=["vehiculo_id","mecanico_id","registrosalidas_id","total"];
+    protected $fillable=["vehiculo_id","mecanico_id","total"];
 
 }

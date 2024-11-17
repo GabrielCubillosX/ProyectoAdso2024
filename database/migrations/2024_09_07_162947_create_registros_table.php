@@ -21,11 +21,6 @@ return new class extends Migration
             
             $table->foreign("mecanico_id")->references("id")->on("mecanicos");
 //-------------------------------------------------------------------------------------------
-            $table->unsignedBigInteger("registrosalidas_id");
-            
-            $table->foreign("registrosalidas_id")->references("id")->on("registros_fechas");
-
-            $table->unsignedBigInteger("total");
 
             $table->timestamps();
         });
